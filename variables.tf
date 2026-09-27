@@ -37,5 +37,5 @@ variable "dynatrace_aws_account_id" {
 variable "role_name" {
   description = "Name of the IAM role to create for Dynatrace."
   type        = string
-  default     = "dynatrace-aws-connection"
+  default     = "dynatrace-aws-monitoring-role-v2"
 }
