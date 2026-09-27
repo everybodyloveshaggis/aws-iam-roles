@@ -16,6 +16,12 @@ variable "tfc_hostname" {
   default     = "app.terraform.io"
 }
 
+variable "tfe_secret_arn" {
+  description = "ARN of the AWS Secrets Manager secret containing the Terraform Cloud token."
+  type        = string
+  default     = "arn:aws:secretsmanager:eu-west-2:899045892145:secret:tfe-secret-1zXi4G"
+}
+
 variable "dynatrace_workspace_name" {
   description = "Terraform Cloud workspace containing the aws_connections output from the Dynatrace AWS connection setup."
   type        = string
@@ -25,7 +31,7 @@ variable "dynatrace_workspace_name" {
 variable "dynatrace_aws_account_id" {
   description = "Dynatrace AWS account ID used in the trust relationship."
   type        = string
-  default     = "210313966486"
+  default     = "314146291599"
 }
 
 variable "role_name" {

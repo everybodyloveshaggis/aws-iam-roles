@@ -18,10 +18,11 @@ locals {
   )
 
   dynatrace_external_id = try(
-    local.dynatrace_connection.sts.externalId,
-    local.dynatrace_connection.sts["externalId"],
+    local.dynatrace_connection.object_id,
+    local.dynatrace_connection.objectId,
     local.dynatrace_connection["sts"]["externalId"],
-    local.dynatrace_object_id,
+    local.dynatrace_connection.sts["externalId"],
+    local.dynatrace_connection.sts.externalId,
     ""
   )
 }
