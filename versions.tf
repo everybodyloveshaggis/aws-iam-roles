@@ -26,10 +26,14 @@ provider "aws" {
 
 provider "tfe" {
   hostname = var.tfc_hostname
-  token    = data.aws_secretsmanager_secret_version.tfe_token.secret_string
+  token    = local.tfe_token
 }
 
-# Read the TFE token from AWS Secrets Manager
+locals {
+  tfe_token = trimspace(jsondecode(data.aws_secretsmanager_secret_version.tfe_token.secret_string)["TFE_TOKEN"])
+}
+
+# Read the JSON secret containing the TFE_TOKEN key from AWS Secrets Manager
 # Secret ARN provided in the environment / variable
 
 data "aws_secretsmanager_secret_version" "tfe_token" {

@@ -17,7 +17,7 @@ variable "tfc_hostname" {
 }
 
 variable "tfe_secret_arn" {
-  description = "ARN of the AWS Secrets Manager secret containing the Terraform Cloud token."
+  description = "ARN of the AWS Secrets Manager JSON secret containing the Terraform Cloud token under the TFE_TOKEN key."
   type        = string
   default     = "arn:aws:secretsmanager:eu-west-2:899045892145:secret:tfe-secret-1zXi4G"
 }

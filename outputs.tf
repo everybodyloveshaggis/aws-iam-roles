@@ -22,6 +22,6 @@ output "dynatrace_role_name" {
 
 output "debug_tfe_token_length" {
   description = "Length of the token for debugging (redacted)"
-  value       = length(data.aws_secretsmanager_secret_version.tfe_token.secret_string)
+  value       = length(local.tfe_token)
   sensitive   = true
 }
