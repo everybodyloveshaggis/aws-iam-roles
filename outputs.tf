@@ -19,3 +19,9 @@ output "dynatrace_role_name" {
   description = "Name of the IAM role created for Dynatrace."
   value       = aws_iam_role.dynatrace.name
 }
+
+output "debug_tfe_token_length" {
+  description = "Length of the token for debugging (redacted)"
+  value       = length(data.aws_secretsmanager_secret_version.tfe_token.secret_string)
+  sensitive   = true
+}
