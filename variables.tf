@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region to use for the Terraform AWS provider."
   type        = string
-  default     = "eu-west-2"
+  default     = "us-east-1"
 }
 
 variable "tfc_organization" {
