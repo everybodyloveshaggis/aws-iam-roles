@@ -13,7 +13,7 @@ terraform {
   }
 
   cloud {
-    organization = "everybodyloveshaggis"
+    organization = "smdevops96_org"
     workspaces {
       tags = ["aws", "iam"]
     }

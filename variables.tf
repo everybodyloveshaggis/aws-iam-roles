@@ -1,13 +1,13 @@
 variable "aws_region" {
   description = "AWS region to use for the Terraform AWS provider."
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-2"
 }
 
 variable "tfc_organization" {
   description = "Terraform Cloud organization that contains the dynatrace-prd-application workspace."
   type        = string
-  default     = "everybodyloveshaggis"
+  default     = "smdevops96_org"
 }
 
 variable "tfc_hostname" {
